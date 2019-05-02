@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {
+  background-color: lightblue;
+}
+</style>
+
+    <title>Butter chicken</title>
+</head>
+<body>
+<h1>Butter Chicken Review </h1>
+{% for post in post %}
+   <p>By {{ post.author }} on {{post.date_posted }}</p>
+   <p>{{ post.content }}</p>
+ {% endfor %}
+
+<div class="form-group">
+  <label for="comment"></label>
+  <textarea class="form-control" rows="10" cols="50" id="comment"></textarea>
+</div>
+<br><button type="button" onclick="alert('SAVED')">SAVE!</button></br>
+</body>
+</html>
